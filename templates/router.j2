@@ -1,0 +1,5 @@
+from fastapi import APIRouter
+from routes.{{ route_file }} import router as {{ route_file }}_router
+
+api_router = APIRouter()
+api_router.include_router({{ route_file }}_router, prefix="/example", tags=["{{ tag }}"])

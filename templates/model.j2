@@ -1,0 +1,14 @@
+from pydantic import BaseModel
+from typing import List, Optional, Any
+
+{% for nested_name, nested_fields in nested_models.items() %}
+class {{ nested_name }}(BaseModel):
+{% for field, type in nested_fields.items() %}
+    {{ field }}: Optional[{{ type }}]
+{% endfor %}
+
+{% endfor %}
+class {{ model_name }}(BaseModel):
+{% for field, type in fields.items() %}
+    {{ field }}: Optional[{{ type }}]
+{% endfor %}

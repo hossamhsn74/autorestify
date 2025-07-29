@@ -1,0 +1,14 @@
+from fastapi import APIRouter
+from schemas.input_model import {{ model_name }}
+
+router = APIRouter()
+
+@router.{{ method }}("{{ path }}", summary="{{ method.upper() }} {{ model_name }} endpoint", tags=["AutoGen"])
+async def {{ function_name }}({% if param_name %}{{ param_name }}: {{ model_name }}{% endif %}):
+    """
+    TODO:
+    - Add your business or ML model logic here.
+    - Use the input model `{{ model_name }}` to access request data.
+    - Return your prediction, response, or processing result.
+    """
+    return {"message": "Your logic goes here"}

@@ -1,0 +1,22 @@
+{
+  "userName": "Alice",
+  "age": 30,
+  "emailVerified": true,
+  "address": {
+    "street": "123 Main St",
+    "city": "Wonderland",
+    "zipcode": 12345
+  },
+  "orders": [
+    {
+      "id": 1,
+      "item": "Book",
+      "price": 9.99
+    },
+    {
+      "id": 2,
+      "item": "Pen",
+      "price": 1.49
+    }
+  ]
+}

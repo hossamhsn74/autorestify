@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+
+# Poetry & pip files
+poetry.lock
+*.egg-info/
+# dist/
+build/
+
+# VS Code and IDE configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test and coverage artifacts
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.junit.xml
+
+# Logs and local files
+*.log
+*.sqlite3
+*.db
+.DS_Store
+
+# mypy / static analysis
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# FastAPI / Swagger cache
+openapi.json
+
+# Output folder from your CLI (optional if regenerated)
+generated/
+
+# Local secrets or config (if used)
+.env
+.env.*
