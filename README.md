@@ -1,4 +1,4 @@
-# FastAPI Endpoint Generator 🧪⚡
+# Autorestify
 
 This CLI tool helps you **instantly scaffold FastAPI endpoints** from a sample JSON input. It's designed for developers, data scientists, and ML engineers who want to expose models or services quickly — without worrying about boilerplate code or standards.
 
