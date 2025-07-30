@@ -8,14 +8,16 @@ This CLI tool helps you **instantly scaffold FastAPI endpoints** from a sample J
 
 - Converts JSON into typed Pydantic models
 - Auto-generates FastAPI route handlers
-- Supports multiple HTTP methods (POST, GET, etc.)
+- Supports multiple HTTP methods (POST, GET, PUT, DELETE, PATCH, or all)
 - Handles nested JSON and lists of objects
 - Adds clear TODOs so you know *exactly* where to add logic
+- Auto-generates test files using `fastapi.testclient` and example input
 - Best-practice file structure:
   ```
   generated/
   ├── schemas/         # Pydantic models
   ├── routes/          # Endpoint functions
+  ├── tests/           # Test cases for generated endpoints
   └── api_router.py    # Router registration
   ```
 
@@ -41,6 +43,11 @@ app = FastAPI()
 app.include_router(api_router)
 ```
 
+5. (Optional) Run the generated test file:
+```bash
+pytest generated/tests/
+```
+
 ---
 
 ## ✅ Example
@@ -56,6 +63,7 @@ Input:
 Output:
 - `schemas/input_model.py`: defines `feature1: float`, `feature2: str`
 - `routes/input_route.py`: creates a route like `@router.post("/example")`
+- `tests/test_input_route.py`: includes test cases for each generated method
 
 ---
 
