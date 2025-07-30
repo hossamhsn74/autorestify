@@ -1,0 +1,12 @@
+def test_{{ method.lower() }}_{{ model_name.lower() }}():
+    """
+    Auto-generated test for {{ method.upper() }} {{ path }}
+    """
+    response = client.{{ method.lower() }}("{{ path }}", json={
+{% for field, example in example_data.items() %}
+        "{{ field }}": {{ example }},
+{% endfor %}
+    })
+    assert response.status_code == 200
+    assert "message" in response.json()
+
